@@ -1,0 +1,182 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline-style: none;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  --font-normal: 'Poppins', arial, sans-serif;
+    outline-style: none;
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-normal);
+  height: 100vh;
+  background-color: var(--Off-white);
+}
+
+
+main{
+  width: 920px;
+  margin: 0px auto;
+  height: fit-content;
+  background-color: var(--White);
+
+  border-radius: 15px 15px 150px 15px;
+  padding: 2rem 3rem;
+}
+
+
+#submit{
+  display: flex;
+  justify-content: right;
+
+  position: relative;
+  top: -3rem;
+}
+
+#submit svg{
+  width: 100px;
+  height: 100px;
+  background-color: var(--Purple);
+  border-radius: 100%;
+  padding: 20px;
+
+  cursor: pointer;
+}
+
+#submit svg:hover{
+  background-color: black;
+  transition: 0.5s;
+}
+
+form{
+  border-bottom: 1px solid var(--Light-grey);
+  padding: 1rem 0 3rem;
+}
+
+form #container-form{
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  color: var(--Smokey-grey);
+}
+
+div.card-form input{
+ 
+  width: 80%;
+
+  border: 1px solid var(--Light-grey);
+  border-radius: 5px;
+  font-weight: bold;
+
+  font-size: xx-large;
+  margin-top: 5px;
+  padding: 0.5rem;
+}
+
+div.card-form input:focus{
+  border: 1px solid var(--Purple);
+   transition: 0.3s;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+div.card-form label{
+  font-size: 1.2rem;
+}
+
+div.card-form span{
+  display: none;
+  font-style: italic;
+  color: var(--Light-red);
+  font-size: .8rem;
+}
+
+section#result{
+  font-size: 6rem;
+  font-style: italic;
+  font-weight: bolder;
+  position: relative;
+  bottom: 2rem;
+  
+}
+
+section#result p{
+  line-height: 90px;
+}
+
+section#result span{
+  color: var(--Purple);
+  letter-spacing: 15px;
+
+}
+@media (max-width: 920px) {
+  main{
+    width: 90%;
+    border-radius: 15px 15px 100px 15px;
+  }
+
+  #submit{
+    justify-content: center;
+  }
+
+  form{
+    gap: 0.5rem;
+  }
+
+  
+  div.card-form input{
+    width: 90%;
+    font-size: large;
+  }
+
+  section#result{
+    font-size: 2rem;
+    bottom: 1rem;
+
+  }
+  #submit{
+    top: -2rem;
+  }
+  #submit svg{
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+  
+    cursor: pointer;
+  }
+  section#result p{
+    line-height: normal;
+  }
+
+  div.card-form label{
+    font-size: 0.6rem;
+  }
+
+  form #container-form{
+    width: 100%;
+  }
+}
