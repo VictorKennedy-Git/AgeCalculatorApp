@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-  <title>Frontend Mentor | Age calculator app</title>
+  <title>Age calculator app</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
@@ -23,7 +23,7 @@
         <div id="container-form">
         <div class="card-form">
           <label for="day">DIA <br>
-            <input type="number" name="day" placeholder="DD">
+            <input type="number" name="day" id="dia" placeholder="DD">
           </label>
           <br>
           <span class="span-day-erro">Insira um dia válido</span>
@@ -31,7 +31,7 @@
         
         <div class="card-form">
           <label for="day">MÊS <br>
-            <input type="number" name="Month" placeholder="MM">
+            <input type="number" name="Month" id='mes' placeholder="MM">
           </label>
           <br>
           <span class="span-month-erro">Insira um mês válido</span>
@@ -39,7 +39,7 @@
           
         <div class="card-form">
           <label for="day">ANO <br>
-            <input type="number" name="Year" placeholder="YYYY">
+            <input type="number" name="Year" id="ano" placeholder="YYYY">
           </label>
           <br>
           <span class="span-year-erro">Insira um ano válido</span>
@@ -48,7 +48,7 @@
       </form>
 
       <section id="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 46 44">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 46 44" id="action">
           <g fill="none" stroke="#fff" stroke-width="2">
             <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
           </g>
@@ -56,9 +56,9 @@
       </section>
 
       <section id="result">
-        <p><span>--</span> Anos</p>
-        <p><span>--</span> Meses</p>
-        <p><span>--</span> Dias</p>
+        <p><span id="TextAno">--</span> Anos</p>
+        <p><span id="TextMes">--</span> Meses</p>
+        <p><span id="TexttDia">--</span> Dias</p>
       </section>
     </section>
 

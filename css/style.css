@@ -12,7 +12,7 @@
   --Smokey-grey: hsl(0, 1%, 44%);
   --Off-black: hsl(0, 0%, 8%);
   --Purple: hsl(259, 100%, 65%);
-  --Light-red: hsl(0, 100%, 67%);
+  --Light-red: #ff5757;
 
   --font-normal: 'Poppins', arial, sans-serif;
     outline-style: none;
