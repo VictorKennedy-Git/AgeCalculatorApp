@@ -133,6 +133,14 @@ section#result span{
   letter-spacing: 15px;
 
 }
+
+.attribution{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  margin: 0px auto;
+}
 @media (max-width: 920px) {
   main{
     width: 90%;
@@ -178,5 +186,8 @@ section#result span{
 
   form #container-form{
     width: 100%;
+  }
+  .attribution{
+    font-size: 0.8rem;
   }
 }
