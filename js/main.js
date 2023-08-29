@@ -4,15 +4,16 @@ document.querySelector('svg#action').addEventListener('click', () => {
     let dia = document.querySelector('input#dia')
 
     let mes = document.querySelector('input#mes')
-    
+
     let ano = document.querySelector('input#ano')
-    
+
     //TEXTO DE RESULTADO
     let resultMesText = document.querySelector('span#TextMes')
 
     let resultAnoText = document.querySelector('span#TextAno')
-    
+
     let resultDiaText = document.querySelector('span#TextDia')
+
 
     function calc() {
         /*
@@ -46,7 +47,7 @@ document.querySelector('svg#action').addEventListener('click', () => {
         // const anoinput = dataSplit[0]
         */
 
-        //SELEÇ~]AP DOS INPUTS E REEDIÇÃO DE COR
+        //SELEÇÃO DOS INPUTS E REEDIÇÃO DE COR
         let alertinputdia = document.querySelector('input#dia')
         alertinputdia.style.borderColor = ""
 
@@ -56,21 +57,39 @@ document.querySelector('svg#action').addEventListener('click', () => {
         let alertinputano = document.querySelector('input#ano')
         alertinputano.style.borderColor = ""
 
+        //SELEÇÃO DAS LABEL PARA EDIÇÃO
+        let labelAlertDay = document.querySelector('label[For="day"]')
+        labelAlertDay.style.color = ""
+
+        let labelAlertMonth = document.querySelector('label[For="month"]')
+        labelAlertMonth.style.color = ""
+
+        let labelAlertYear = document.querySelector('label[For="year"]')
+        labelAlertYear.style.color = ""
 
         //EDIÇÃO DE ERRO DO SPAN
         let SpanErroDay = document.querySelector('span.span-day-erro')
         SpanErroDay.style.display = 'none'
-    
+
         let SpanErroMonth = document.querySelector('span.span-month-erro')
         SpanErroMonth.style.display = 'none'
-    
+
         let SpanErroYear = document.querySelector('span.span-year-erro')
         SpanErroYear.style.display = 'none'
 
-        function erro(){
+        function erro() {
             console.log('Coloque um Dado válido no campo informado')
-        }
 
+            labelAlertDay.style.color = '#ff5757'
+            labelAlertMonth.style.color = '#ff5757'
+            labelAlertYear.style.color = '#ff5757'
+
+            alertinputdia.style.borderColor = "#ff5757"
+            alertinputmes.style.borderColor = "#ff5757"
+            alertinputano.style.borderColor = "#ff5757"
+        }
+        const date = new Date()
+        const anohoje = date.getFullYear()
         if (mes.value == 2 && dia.value > 29 || dia.value == 0) {
             SpanErroDay.style.display = 'block'
             alertinputdia.style.borderColor = "#ff5757"
@@ -83,7 +102,7 @@ document.querySelector('svg#action').addEventListener('click', () => {
             SpanErroMonth.style.display = 'block'
             alertinputmes.style.borderColor = "#ff5757"
             return erro()
-        } if (ano.value == 0) {
+        } if (ano.value == 0 || ano.value < 1582 || ano.value > anohoje) {
             SpanErroYear.style.display = 'block'
             alertinputano.style.borderColor = "#ff5757"
             return erro()
@@ -109,13 +128,12 @@ document.querySelector('svg#action').addEventListener('click', () => {
             }
 
             function textedited() {
-                resultAnoText.innerText = `${anos}`
-                resultMesText.innerText = `${meses}`
+                resultAnoText.innerText = `${anos > 0?anos:0}`
+                resultMesText.innerText = `${meses} `
                 resultDiaText.innerText = `${dias}`
             }
             return textedited()
         }
-       
     }
     calc()
 })

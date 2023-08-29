@@ -9,7 +9,7 @@
   --White: hsl(0, 0%, 100%);
   --Off-white: hsl(0, 0%, 94%);
   --Light-grey: hsl(0, 0%, 86%);
-  --Smokey-grey: hsl(0, 1%, 44%);
+  --Smokey-grey: #716f6f;
   --Off-black: hsl(0, 0%, 8%);
   --Purple: hsl(259, 100%, 65%);
   --Light-red: #ff5757;
@@ -104,8 +104,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-div.card-form label{
+label{
   font-size: 1.2rem;
+  color: var(--Smokey-grey);
 }
 
 div.card-form span{

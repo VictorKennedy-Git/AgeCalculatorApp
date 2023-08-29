@@ -22,24 +22,24 @@
       <form action="get">
         <div id="container-form">
         <div class="card-form">
-          <label for="day">DIA <br>
-            <input type="number" name="day" id="dia" placeholder="DD">
+          <label for="day" class="alert" >DIA <br>
+          <input type="number" name="day" id="dia" placeholder="DD" maxlength="2">
           </label>
           <br>
           <span class="span-day-erro">Insira um dia válido</span>
         </div>
         
         <div class="card-form">
-          <label for="day">MÊS <br>
-            <input type="number" name="Month" id='mes' placeholder="MM">
+          <label for="month" class="alert">MÊS <br>
+            <input type="number" name="Month" id='mes' placeholder="MM" maxlength="2">
           </label>
           <br>
-          <span class="span-month-erro">Insira um mês válido</span>
+          <span class="span-month-erro" >Insira um mês válido</span>
         </div>
           
         <div class="card-form">
-          <label for="day">ANO <br>
-            <input type="number" name="Year" id="ano" placeholder="YYYY">
+          <label for="year" class="alert">ANO <br>
+            <input type="number" name="Year" id="ano" placeholder="YYYY" maxlength="4" min="1582">
           </label>
           <br>
           <span class="span-year-erro">Insira um ano válido</span>
